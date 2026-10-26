@@ -13,5 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: "Hello World"
+    - name: Hello World
       run: echo "Hello World"
+    - name: MuestraFecha
+      run: date
+    - name: ListarDirectorio
+      run: ls -la
