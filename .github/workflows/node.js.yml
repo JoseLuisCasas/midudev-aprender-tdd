@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Hello World
-      run: echo "Hello World"
-    - name: MuestraFecha
-      run: date
-    - name: ListarDirectorio
-      run: ls -la
+    - uses: actions/checkout@v7
+    - uses: actions/setup-node@v7
+      with:
+        node-version: 24
+        cache: 'npm'
+    - run: npm ci --legacy-peer-deps
+    - run: npm run build
